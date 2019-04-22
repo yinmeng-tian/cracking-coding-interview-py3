@@ -1,0 +1,18 @@
+def urlify(string, true_len):
+    counter = 0
+    res = ''
+
+    for i, w in enumerate(string):
+        if counter < true_len:
+            if w == ' ':
+                res += '%20'
+                counter += 1
+            else:
+                res += w
+                counter += 1
+
+        else:
+            return str(res)
+
+
+print(urlify("Mr John Smith    ", 13))
